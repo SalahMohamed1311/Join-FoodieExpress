@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #ff7f00;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #8f4801;
+        }
+
+        /* Hide visa section by default */
+        #visa-section {
+            display: none;
+            margin-top: 15px;
+        }
+
+        /* Show visa section only when card is selected */
+        #pay-card:checked~#visa-section {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Checkout</h2>
+
+        <form onsubmit="placeOrder(event)">
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter your phone number" required>
+
+            <label>Address</label>
+            <input type="text" placeholder="Enter your delivery address" required>
+
+            <label>Payment Method</label>
+
+            <input type="radio" name="method" id="pay-cash" required checked>
+            <label for="pay-cash">Cash on Delivery</label>
+
+            <input type="radio" name="method" id="pay-card">
+            <label for="pay-card">Credit Card (VISA)</label>
+
+            <div id="visa-section">
+
+                <label>Card Holder Name</label>
+                <input type="text" placeholder="Name on card" id="card-holder" required disabled>
+
+                <label>Card Number</label>
+                <input type="number" placeholder="xxxx xxxx xxxx xxxx" id="card-number" required disabled>
+
+                <label>Expiry Date</label>
+                <input type="month" id="expiry-date" required disabled>
+
+                <label>CVV</label>
+                <input type="number" placeholder="123" id="cvv" required disabled>
+
+            </div>
+
+            <button class="btn" type="submit">Place Order</button>
+
+        </form>
+    </div>
+    <script>
+        function toggleCardFields(enable) {
+            // Get all required inputs in the VISA section
+            const cardInputs = document.querySelectorAll('#visa-section input[required]');
+
+            cardInputs.forEach(input => {
+                if (enable) {
+                    // If Card is selected, remove 'disabled' so 'required' is active
+                    input.removeAttribute('disabled');
+                } else {
+                    // If Cash is selected, add 'disabled' so 'required' is ignored by the browser
+                    input.setAttribute('disabled', 'true');
+                    input.value = ''; // Clear value when disabled
+                }
+            });
+        }
+
+        // Get references to the radio buttons
+        const payCash = document.getElementById('pay-cash');
+        const payCard = document.getElementById('pay-card');
+
+        // Add event listeners
+        payCash.addEventListener('change', () => toggleCardFields(false));
+        payCard.addEventListener('change', () => toggleCardFields(true));
+
+        // Initialize state on page load (since pay-cash is checked by default)
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleCardFields(payCard.checked);
+        });
+    </script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

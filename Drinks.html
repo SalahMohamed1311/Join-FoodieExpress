@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHunterShop </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <style>
+     
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+   
+    background: #fafafa;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+/* MENU GRID */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* CARD STYLE */
+.menu-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+
+
+/* CARD HOVER */
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+/* PRICE */
+.menu-item span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff4500;
+}
+
+/* STAR RATING */
+.rate {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 10px;
+ 
+}
+
+.rate span {
+    font-size: 22px;
+    color: #ccc;
+}
+
+.rate span:hover,
+.rate span:hover ~ span {
+    color: #FFD700;
+}
+
+/* ADD BUTTON */
+.add-btn {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+
+    margin-top: 10px;
+   
+}
+
+.add-btn:hover {
+    background-color: #e03e00;
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 12px;
+   
+}
+
+   /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7f00, #ff4500);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+         .logo h2 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+                .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            color: #ffeaa7;
+        }
+</style>
+</head>
+<body>
+   <nav class="navbar">
+        <div class="logo">
+            <h2>FoodieExpress</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="dashboard_page.html">Dashboard</a></li>
+            <li><a href="track_page.html">Track Order</a></li>
+            <li><a href="contact_page.html">Contact</a></li>
+            <li><a href="cart_page.html">Cart</a></li>
+        </ul>
+    </nav>
+<h1>Drinks</h1>
+    <h3></h3>
+<div class="menu">
+  <!-- 1 -->
+  <!-- 1 -->
+<div class="menu-item"> 
+  <img src="41.jpg" alt="Coca Cola" /> 
+  <h3>Coca Cola</h3> 
+  <p>Classic fizzy cola served chilled – a refreshing favorite for any meal.</p> 
+  <span>$2.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Coca Cola', 2.49)">Add to Cart</button> 
+</div> 
+
+<!-- 2 -->
+<div class="menu-item"> 
+  <img src="42.jpg" alt="Sprite" /> 
+  <h3>Sprite</h3> 
+  <p>Clear lemon-lime soda with a crisp, refreshing taste – perfect for cooling off.</p> 
+  <span>$2.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Sprite', 2.49)">Add to Cart</button> 
+</div> 
+
+<!-- 3 -->
+<div class="menu-item"> 
+  <img src="43.jpg" alt="Fanta" /> 
+  <h3>Fanta</h3> 
+  <p>Sweet orange soda with bubbly fizz – fun and fruity refreshment.</p> 
+  <span>$2.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Fanta', 2.49)">Add to Cart</button> 
+</div> 
+
+<!-- 4 -->
+<div class="menu-item"> 
+  <img src="44.jpg" alt="Orange Juice" /> 
+  <h3>Orange Juice</h3> 
+  <p>Freshly squeezed orange juice – tangy, sweet, and packed with vitamin C.</p> 
+  <span>$3.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Orange Juice', 3.49)">Add to Cart</button> 
+</div> 
+
+<!-- 5 -->
+<div class="menu-item"> 
+  <img src="45.jpg" alt="Lemonade" /> 
+  <h3>Lemonade</h3> 
+  <p>Refreshing lemonade made with fresh lemons, sugar, and a hint of mint.</p> 
+  <span>$3.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Lemonade', 3.49)">Add to Cart</button> 
+</div> 
+
+<!-- 6 -->
+<div class="menu-item"> 
+  <img src="46.jpg" alt="Iced Tea" /> 
+  <h3>Iced Tea</h3> 
+  <p>Chilled black tea served over ice with a touch of lemon – cool and revitalizing.</p> 
+  <span>$2.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Iced Tea', 2.99)">Add to Cart</button> 
+</div> 
+
+<!-- 7 -->
+<div class="menu-item"> 
+  <img src="47.jpg" alt="Virgin Mojito" /> 
+  <h3>Virgin Mojito</h3> 
+  <p>Mint, lime, and soda combine for a refreshing non-alcoholic mojito.</p> 
+  <span>$3.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Virgin Mojito', 3.99)">Add to Cart</button> 
+</div> 
+
+<!-- 8 -->
+<div class="menu-item"> 
+  <img src="48.jpg" alt="Chocolate Milkshake" /> 
+  <h3>Chocolate Milkshake</h3> 
+  <p>Rich and creamy chocolate milkshake topped with whipped cream – a sweet treat.</p> 
+  <span>$4.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Chocolate Milkshake', 4.49)">Add to Cart</button> 
+</div> 
+
+<!-- 9 -->
+<div class="menu-item"> 
+  <img src="49.jpg" alt="Coffee" /> 
+  <h3>Coffee</h3> 
+  <p>Freshly brewed coffee – hot, aromatic, and perfect to start your day.</p> 
+  <span>$2.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Coffee', 2.99)">Add to Cart</button> 
+</div> 
+
+<!-- 10 -->
+<div class="menu-item"> 
+  <img src="50.jpg" alt="Green Smoothie" /> 
+  <h3>Green Smoothie</h3> 
+  <p>Healthy blend of spinach, banana, and apple – refreshing and full of nutrients.</p> 
+  <span>$4.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Green Smoothie', 4.49)">Add to Cart</button> 
+</div> 
+
+</div>
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHunterShop - Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>FoodieExpress</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="dashboard_page.html">Dashboard</a></li>
+            <li><a href="track_page.html">Track Order</a></li>
+            <li><a href="contact_page.html">Contact</a></li>
+            <li><a href="cart_page.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1><i class="fas fa-envelope"></i> Get In Touch</h1>
+            <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <p>Have a question or feedback? Fill out the form below.</p>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+20 123 456 7890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="order">Order Issue</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Main Street</p>
+                    <p>Alexandria, Egypt</p>
+                    <p>Postal Code: 21500</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Customer Service:</p>
+                    <p><a href="tel:+201234567890">+20 123 456 7890</a></p>
+                    <p>Support Hotline:</p>
+                    <p><a href="tel:+201234567891">+20 123 456 7891</a></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 11:00 PM</p>
+                    <p>Saturday - Sunday: 10:00 AM - 12:00 AM</p>
+                    <p>Support: 24/7 Available</p>
+                </div>
+
+            </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>

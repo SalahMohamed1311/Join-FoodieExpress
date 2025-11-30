@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHunterShop </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <style>
+     
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  
+    background: #fafafa;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+/* MENU GRID */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* CARD STYLE */
+.menu-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+
+/* CARD HOVER */
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+/* PRICE */
+.menu-item span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff4500;
+}
+
+/* STAR RATING */
+.rate {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 10px;
+ 
+}
+
+.rate span {
+    font-size: 22px;
+    color: #ccc;
+}
+
+.rate span:hover,
+.rate span:hover ~ span {
+    color: #FFD700;
+}
+
+/* ADD BUTTON */
+.add-btn {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+  
+    margin-top: 10px;
+   
+}
+
+.add-btn:hover {
+    background-color: #e03e00;
+    
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;  
+    object-fit: cover;   
+    border-radius: 12px;
+    
+}
+
+   /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7f00, #ff4500);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+         .logo h2 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+                .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            color: #ffeaa7;
+        }
+</style>
+</head>
+<body>
+   <nav class="navbar">
+        <div class="logo">
+            <h2>FoodieExpress</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="dashboard_page.html">Dashboard</a></li>
+            <li><a href="track_page.html">Track Order</a></li>
+            <li><a href="contact_page.html">Contact</a></li>
+            <li><a href="cart_page.html">Cart</a></li>
+        </ul>
+    </nav>
+<h1>Salads</h1>
+    <h3></h3>
+<div class="menu">
+  <!-- 1 -->
+  <!-- 1 -->
+<div class="menu-item"> 
+  <img src="31.jpg" alt="Caesar Salad" /> 
+  <h3>Caesar Salad</h3> 
+  <p>Crisp romaine lettuce with creamy Caesar dressing, croutons, and shaved Parmesan.</p> 
+  <span>$7.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Caesar Salad', 7.99)">Add to Cart</button> 
+</div> 
+
+<!-- 2 -->
+<div class="menu-item"> 
+  <img src="32.jpg" alt="Greek Salad" /> 
+  <h3>Greek Salad</h3> 
+  <p>Fresh cucumbers, tomatoes, olives, and feta cheese with a tangy olive oil dressing.</p> 
+  <span>$8.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Greek Salad', 8.49)">Add to Cart</button> 
+</div> 
+
+<!-- 3 -->
+<div class="menu-item"> 
+  <img src="33.jpg" alt="Caprese Salad" /> 
+  <h3>Caprese Salad</h3> 
+  <p>Juicy tomatoes, fresh mozzarella, and basil drizzled with balsamic glaze.</p> 
+  <span>$8.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Caprese Salad', 8.99)">Add to Cart</button> 
+</div> 
+
+<!-- 4 -->
+<div class="menu-item"> 
+  <img src="34.jpg" alt="Spinach Salad" /> 
+  <h3>Spinach Salad</h3> 
+  <p>Fresh baby spinach with strawberries, walnuts, and a light vinaigrette dressing.</p> 
+  <span>$7.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Spinach Salad', 7.49)">Add to Cart</button> 
+</div> 
+
+<!-- 5 -->
+<div class="menu-item"> 
+  <img src="35.jpg" alt="Cobb Salad" /> 
+  <h3>Cobb Salad</h3> 
+  <p>Mixed greens topped with chicken, bacon, avocado, blue cheese, and boiled eggs.</p> 
+  <span>$9.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Cobb Salad', 9.49)">Add to Cart</button> 
+</div> 
+
+<!-- 6 -->
+<div class="menu-item"> 
+  <img src="36.jpg" alt="Avocado Salad" /> 
+  <h3>Avocado Salad</h3> 
+  <p>Creamy avocado, cherry tomatoes, red onions, and mixed greens with lemon dressing.</p> 
+  <span>$8.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Avocado Salad', 8.49)">Add to Cart</button> 
+</div> 
+
+<!-- 7 -->
+<div class="menu-item"> 
+  <img src="37.jpg" alt="Shrimp Salad" /> 
+  <h3>Shrimp Salad</h3> 
+  <p>Juicy shrimp tossed with fresh greens, cucumbers, and a zesty citrus dressing.</p> 
+  <span>$10.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Shrimp Salad', 10.99)">Add to Cart</button> 
+</div> 
+
+<!-- 8 -->
+<div class="menu-item"> 
+  <img src="38.jpg" alt="Quinoa Salad" /> 
+  <h3>Quinoa Salad</h3> 
+  <p>Protein-packed quinoa with roasted vegetables, herbs, and a light lemon dressing.</p> 
+  <span>$9.49</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Quinoa Salad', 9.49)">Add to Cart</button> 
+</div> 
+
+<!-- 9 -->
+<div class="menu-item"> 
+  <img src="39.jpg" alt="Mixed Green Salad" /> 
+  <h3>Mixed Green Salad</h3> 
+  <p>Fresh mixed greens with cherry tomatoes, cucumbers, and your choice of dressing.</p> 
+  <span>$6.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Mixed Green Salad', 6.99)">Add to Cart</button> 
+</div> 
+
+<!-- 10 -->
+<div class="menu-item"> 
+  <img src="40.jpg" alt="Italian Salad" /> 
+  <h3>Italian Salad</h3> 
+  <p>Romaine lettuce, cherry tomatoes, olives, salami, and Parmesan with Italian dressing.</p> 
+  <span>$8.99</span> 
+  <div class="rate"> 
+    <span data-value="5">★</span> 
+    <span data-value="4">★</span> 
+    <span data-value="3">★</span> 
+    <span data-value="2">★</span> 
+    <span data-value="1">★</span> 
+  </div> 
+  <button class="add-btn" onclick="addToCart('Italian Salad', 8.99)">Add to Cart</button> 
+</div> 
+
+</div>
+<script src="cart.js"></script>
+
+</body>
+</html>

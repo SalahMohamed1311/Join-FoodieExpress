@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHunterShop - Track Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="track.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <h2>FoodieExpress</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="dashboard_page.html">Dashboard</a></li>
+            <li><a href="track_page.html">Track Order</a></li>
+            <li><a href="contact_page.html">Contact</a></li>
+            <li><a href="cart_page.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1><i class="fas fa-map-marker-alt"></i> Track Your Order</h1>
+        <div class="order-id">
+            Order ID: <strong id="orderId">ORD847592</strong>
+        </div>
+
+        <div class="estimated-time">
+            <h3>Estimated Delivery Time</h3>
+            <div class="time-value">10-15 min</div>
+        </div>
+
+        <div class="tracking-timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-line-progress" id="progressLine"></div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Order Confirmed</h3>
+                    <p>Your order has been received and confirmed</p>
+                    <span class="time">2:30 PM</span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Preparing Your Food</h3>
+                    <p>Our kitchen is preparing your delicious meal</p>
+                    <span class="time">2:35 PM</span>
+                </div>
+            </div>
+
+            <div class="timeline-item active">
+                <div class="timeline-icon">
+                    <i class="fas fa-motorcycle"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Out for Delivery</h3>
+                    <p>Your order is on its way to you</p>
+                    <span class="time">2:45 PM</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Delivered</h3>
+                    <p>Enjoy your meal!</p>
+                    <span class="time">Arriving soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="delivery-info">
+            <h3><i class="fas fa-user-circle"></i> Your Delivery Partner</h3>
+            <div class="delivery-person">
+                <div class="delivery-avatar">AH</div>
+                <div class="delivery-details">
+                    <p><strong>Ahmed Hassan</strong></p>
+                    <p><i class="fas fa-star" style="color: #FFD700;"></i> 4.8 Rating</p>
+                    <p><i class="fas fa-motorcycle"></i> Motorcycle - ABC 1234</p>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="contact-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Driver
+                </button>
+                <button class="contact-btn message-btn">
+                    <i class="fas fa-comment"></i> Message
+                </button>
+            </div>
+        </div>
+
+        <div class="order-details">
+    <h2>Order Details</h2>
+
+    <div class="detail-row">
+        <span class="detail-label">Order ID:</span>
+        <span class="detail-value" id="od_id"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="detail-label">Order Date:</span>
+        <span class="detail-value" id="od_date"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="detail-label">Items:</span>
+        <span class="detail-value" id="od_items"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="detail-label">Total Amount:</span>
+        <span class="detail-value" id="od_total"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="detail-label">Payment Method:</span>
+        <span class="detail-value" id="od_payment"></span>
+    </div>
+
+    <div class="detail-row">
+        <span class="detail-label">Delivery Address:</span>
+        <span class="detail-value" id="od_address"></span>
+    </div>
+</div>
+
+    <script src="track.js"></script>
+</body>
+</html>

@@ -29,7 +29,7 @@ function adminLogout() {
         localStorage.removeItem("adminLoggedIn");
         localStorage.removeItem("adminEmail");
         localStorage.removeItem("adminLoginTime");
-        window.location.href = "admin_login.html";
+        window.location.href = "login_enhanced.html";
     }
 }
 
